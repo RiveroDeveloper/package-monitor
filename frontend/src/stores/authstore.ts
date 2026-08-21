@@ -35,6 +35,10 @@ export const useAuthStore = defineStore('auth', () => {
   }
 
   async function loadCurrentUser(): Promise<UserInterface | null> {
+    if (AUTH_DISABLED) {
+      currentUser.value = DEMO_USER;
+      return currentUser.value;
+    }
     syncToken();
     currentUser.value = await AuthService.getCurrentUser();
     return currentUser.value;
