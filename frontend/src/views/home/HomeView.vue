@@ -51,6 +51,7 @@ const secondaryActionLabel = computed(() =>
             >Dashboard</RouterLink
           >
           <RouterLink
+            v-if="!authStore.isAuthenticated"
             to="/login"
             class="text-sm font-semibold text-soft hover:text-primary transition-colors"
             >Sign In</RouterLink
