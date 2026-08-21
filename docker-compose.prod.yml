@@ -1,0 +1,36 @@
+# Production stack — uses pre-built images from GHCR.
+# Run on the VM with: docker compose -f docker-compose.prod.yml up -d
+# Stop with:          docker compose -f docker-compose.prod.yml down
+
+services:
+  backend:
+    image: ghcr.io/OWNER/packtrack-backend:latest
+    container_name: packtrack-backend
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      PORT: 3000
+      CORS_ORIGIN: ${CORS_ORIGIN}
+      SQLITE_PATH: /data/database.sqlite
+    volumes:
+      - backend-data:/data
+
+  frontend:
+    image: ghcr.io/OWNER/packtrack-frontend:latest
+    container_name: packtrack-frontend
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+
+  nuxt:
+    image: ghcr.io/OWNER/packtrack-nuxt:latest
+    container_name: packtrack-nuxt
+    restart: unless-stopped
+    ports:
+      - "3001:3000"
+
+volumes:
+  backend-data:

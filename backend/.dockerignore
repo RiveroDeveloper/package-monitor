@@ -1,0 +1,17 @@
+node_modules
+dist
+*.sqlite
+*.sqlite-journal
+*.sqlite3
+.env
+.env.*
+.git
+.gitignore
+.vscode
+.idea
+*.log
+.DS_Store
+docs
+README.md
+Dockerfile
+.dockerignore

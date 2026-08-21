@@ -1,0 +1,34 @@
+# Run the full PackTrack stack with: docker compose up -d
+# Stop with: docker compose down (keeps data) — or `down -v` to wipe the DB.
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: packtrack-backend
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      PORT: 3000
+      CORS_ORIGIN: http://localhost:5173,http://localhost
+      SQLITE_PATH: /data/database.sqlite
+    volumes:
+      - backend-data:/data
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        VITE_API_BASE_URL: http://localhost:3000/api/
+    container_name: packtrack-frontend
+    restart: unless-stopped
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend
+
+volumes:
+  backend-data:
