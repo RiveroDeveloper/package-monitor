@@ -1,4 +1,3 @@
-/** @author David Hdez, Juan Andrés Young */
 // Internal imports
 import type { CreatePackageDTO } from "@/dtos/packages/CreatePackageDTO";
 import type { PackageInterface } from "@/interfaces/PackageInterface";

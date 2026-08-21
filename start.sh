@@ -7,9 +7,10 @@ export NGINX_PORT="${PORT:-10000}"
 echo "==> Puerto público (nginx): $NGINX_PORT"
 
 # Iniciar backend NestJS en 127.0.0.1:3000 (interno, no expuesto)
+# AUTH_DISABLED=true deja login/registro deshabilitados para demo.
 echo "==> Iniciando backend NestJS en 127.0.0.1:3000..."
 cd /app/backend
-PORT=3000 node dist/main.js &
+PORT=3000 AUTH_DISABLED=true node dist/main.js &
 BACKEND_PID=$!
 
 # Inyectar ${NGINX_PORT} en el config de nginx

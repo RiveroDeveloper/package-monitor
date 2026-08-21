@@ -13,6 +13,11 @@ Deployed on **Render** (single-container: nginx + NestJS + Vue):
 
 - **URL:** https://packtrack-qxr5.onrender.com
 
+> **Authentication is disabled on the live demo** so visitors can explore every
+> section (including admin views) without logging in. To re-enable it, set
+> `AUTH_DISABLED=false` in the backend and `VITE_AUTH_DISABLED=false` in the
+> frontend build, then redeploy.
+
 ## Tech stack (frontend)
 
 - **Vue 3** + Composition API (`<script setup>`)

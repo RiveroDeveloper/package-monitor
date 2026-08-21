@@ -1,4 +1,3 @@
-<!-- @author David Hdez, Samuel Rivero, Juan Andrés Young -->
 <script setup lang="ts">
 // External imports
 import type { Chart } from 'chart.js';

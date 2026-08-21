@@ -1,4 +1,3 @@
-/** @author David Hdez, Juan Andrés Young */
 // Internal imports
 import type { Role } from '@/interfaces/UserInterface';
 

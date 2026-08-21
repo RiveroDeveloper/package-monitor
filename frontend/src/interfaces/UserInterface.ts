@@ -1,4 +1,3 @@
-/** @author David Hdez, Juan Andrés Young */
 export type Role = 'Admin' | 'User';
 
 export interface UserInterface {

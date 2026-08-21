@@ -1,4 +1,3 @@
-/** @author David Hdez, Juan Andrés Young */
 // External imports
 import { createRouter, createWebHistory } from 'vue-router';
 

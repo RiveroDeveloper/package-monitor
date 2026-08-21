@@ -1,4 +1,3 @@
-/** @author David Hdez, Juan Andrés Young */
 // Internal imports
 import type { CreateWarehouseDTO } from '@/dtos/warehouses/CreateWarehouseDTO';
 import type { UpdateWarehouseDTO } from '@/dtos/warehouses/UpdateWarehouseDTO';

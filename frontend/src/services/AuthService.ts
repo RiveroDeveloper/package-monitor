@@ -1,4 +1,3 @@
-/** @author David Hdez, Juan Andrés Young */
 // Internal imports
 import { ACCESS_TOKEN_KEY, axiosInstance } from '@/utils/axiosInstance';
 import type { RegisterDTO } from '@/dtos/users/RegisterDTO';

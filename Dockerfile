@@ -12,6 +12,8 @@ RUN npm ci
 COPY frontend/ ./
 ARG VITE_API_BASE_URL=/api/
 ENV VITE_API_BASE_URL=$VITE_API_BASE_URL
+ARG VITE_AUTH_DISABLED=true
+ENV VITE_AUTH_DISABLED=$VITE_AUTH_DISABLED
 RUN npm run build
 
 # ---- Etapa 2: Compilación del backend NestJS ----

@@ -1,4 +1,3 @@
-/** @author David Hdez, Juan Andrés Young */
 // Internal imports
 import type { UserInterface } from '@/interfaces/UserInterface';
 import type { WarehouseInterface } from '@/interfaces/WarehouseInterface';

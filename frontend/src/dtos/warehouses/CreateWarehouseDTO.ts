@@ -1,4 +1,3 @@
-/** @author David Hdez, Juan Andrés Young */
 export interface CreateWarehouseDTO {
   name: string;
   location: string;

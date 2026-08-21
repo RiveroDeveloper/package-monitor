@@ -1,4 +1,3 @@
-<!-- @author Samuel Rivero -->
 <script setup lang="ts">
 defineProps<{
   status: string;

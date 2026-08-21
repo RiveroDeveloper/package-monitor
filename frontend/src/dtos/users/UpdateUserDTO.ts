@@ -1,4 +1,3 @@
-/** @author Juan Andrés Young */
 // Internal imports
 import type { CreateUserDTO } from '@/dtos/users/CreateUserDTO';
 

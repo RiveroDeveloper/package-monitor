@@ -1,4 +1,3 @@
-/** @author David Hdez, Samuel Rivero */
 // external imports
 import {
   ArcElement,

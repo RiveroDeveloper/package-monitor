@@ -1,4 +1,3 @@
-<!-- @author David Hdez, Juan Andrés Young -->
 <script setup lang="ts">
 // External imports
 import { computed, onMounted } from 'vue';

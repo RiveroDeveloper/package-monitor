@@ -1,4 +1,3 @@
-/** @author David Hdez, Juan Andrés Young */
 // External imports
 import { computed, ref } from 'vue';
 import { defineStore } from 'pinia';
@@ -10,7 +9,22 @@ import type { RegisterDTO } from '@/dtos/users/RegisterDTO';
 import type { UserInterface } from '@/interfaces/UserInterface';
 
 export const useAuthStore = defineStore('auth', () => {
-  const currentUser = ref<UserInterface | null>(null);
+  // When auth is disabled (demo mode), a demo admin user is pre-authenticated
+  // so every route is accessible without logging in. Set VITE_AUTH_DISABLED to
+  // false (or remove it) to restore the normal login flow.
+  const AUTH_DISABLED = (import.meta.env.VITE_AUTH_DISABLED ?? 'false') === 'true';
+
+  const DEMO_USER: UserInterface = {
+    id: 'demo-user',
+    name: 'Demo Admin',
+    email: 'demo@packtrack.local',
+    role: 'Admin',
+    avatarUrl: null,
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+  };
+
+  const currentUser = ref<UserInterface | null>(AUTH_DISABLED ? DEMO_USER : null);
   const token = ref<string | null>(localStorage.getItem(ACCESS_TOKEN_KEY));
 
   const isAuthenticated = computed(() => currentUser.value !== null);

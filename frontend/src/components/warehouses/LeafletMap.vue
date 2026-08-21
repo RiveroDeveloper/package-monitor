@@ -1,6 +1,5 @@
 <script setup lang="ts">
 /**
- * @author Juan Andrés Young Hoyos
  * @description Reusable Leaflet map with canvas-based comet arcs animating along curved Bezier routes.
  */
 

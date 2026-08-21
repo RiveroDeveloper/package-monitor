@@ -1,4 +1,3 @@
-/** @author David Hdez, Juan Andrés Young */
 // Internal imports
 import type { UpdateUserDTO } from '@/dtos/users/UpdateUserDTO';
 import type { UserInterface } from '@/interfaces/UserInterface';
