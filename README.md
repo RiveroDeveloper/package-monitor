@@ -7,9 +7,11 @@ This repository contains both halves of the project:
 - **Frontend** — Vue 3 SPA at the repo root (`src/`)
 - **Backend** — NestJS REST API in [`backend/`](./backend/)
 
-## Authors
+## Live demo
 
-Samuel Rivero, Law (David Hdez), Juan Andrés Young Hoyos
+Deployed on **Render** (single-container: nginx + NestJS + Vue):
+
+- **URL:** https://packtrack-qxr5.onrender.com
 
 ## Tech stack (frontend)
 
