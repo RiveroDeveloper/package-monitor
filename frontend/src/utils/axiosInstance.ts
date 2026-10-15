@@ -31,7 +31,7 @@ axiosInstance.interceptors.response.use(
 
       if (!onLoginRoute) {
         const { default: router } = await import('@/router');
-        await router.push('/login');
+        await router.push('/');
       }
     }
     return Promise.reject(error);

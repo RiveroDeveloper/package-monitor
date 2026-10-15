@@ -33,7 +33,7 @@ function isRouteGroupActive(groupName: string): boolean {
 
 async function handleLogout(): Promise<void> {
   authStore.clearSession();
-  await router.push({ name: 'login' });
+  await router.push({ name: 'home' });
 }
 </script>
 
